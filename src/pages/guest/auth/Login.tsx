@@ -35,7 +35,7 @@ export const Login = () => {
 	return (
 		<div>
 			<AppAuthNavigationMenu onClick={handleOpenSignup} text="Create account" />
-			<AppTypography variant="h5" className="mt-5 text-[25px] font-medium">
+			<AppTypography variant="h5" className="mt-10 md:mt-5 text-[25px] font-medium">
 				Login to Franchain
 			</AppTypography>
 			<AppForm
