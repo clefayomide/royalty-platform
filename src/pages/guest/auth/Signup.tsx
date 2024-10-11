@@ -120,7 +120,7 @@ export const Signup = () => {
 					}}
 				/>
 				<AppButton
-					type="submit"
+					type="button"
 					disabled={!isDirty || !isValid}
 					className="w-[144px] mt-3"
 				>
