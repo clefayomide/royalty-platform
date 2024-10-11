@@ -89,7 +89,7 @@ export const Login = () => {
 					disabled={!isDirty || !isValid}
 					className="w-[131px] mt-3"
 				>
-					Sign up
+					Login
 				</AppButton>
 			</AppForm>
 		</div>
