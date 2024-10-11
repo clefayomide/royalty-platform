@@ -2,7 +2,7 @@ import { ButtonPropType } from "../../type";
 import { classnames } from "../../utils";
 
 const Button = (props: ButtonPropType) => {
-	const { className = "", children, disabled } = props;
+	const { className = "", children, disabled, ...rest } = props;
 	return (
 		<button
 			className={classnames(
@@ -10,6 +10,7 @@ const Button = (props: ButtonPropType) => {
 				disabled ? "bg-disabled" : "bg-primary",
 				className
 			)}
+			{...rest}
 		>
 			{children}
 		</button>

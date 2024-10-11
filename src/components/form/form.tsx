@@ -4,7 +4,7 @@ import { classnames } from "../../utils";
 const Form = (props: FormPropType) => {
 	const { children, className = "", ...rest } = props;
 	return (
-		<form className={classnames("", className)} {...rest}>
+		<form noValidate className={classnames("", className)} {...rest}>
 			{children}
 		</form>
 	);

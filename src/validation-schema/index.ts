@@ -6,8 +6,7 @@ export const signupSchema = z.object({
 		.string({ message: validationMessages.reqFields.firstName })
 		.max(validationMessages.minMax.firstName.max, {
 			message: validationMessages.valMsg.firstName,
-		})
-		.trim(),
+		}),
 	lastName: z
 		.string({ message: validationMessages.reqFields.lastName })
 		.max(validationMessages.minMax.lastName.max, {
@@ -27,4 +26,11 @@ export const signupSchema = z.object({
 		.max(validationMessages.minMax.password.max, {
 			message: validationMessages.valMsg.password,
 		}),
+});
+
+export const loginSchema = z.object({
+	email: z
+		.string({ message: validationMessages.reqFields.email })
+		.email({ message: validationMessages.valMsg.email }),
+	password: z.string({ message: validationMessages.reqFields.password }),
 });

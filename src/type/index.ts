@@ -1,3 +1,6 @@
+import { z } from "zod";
+import { loginSchema, signupSchema } from "../validation-schema";
+
 export type RouteType = {
 	title: string;
 	path: string;
@@ -33,3 +36,6 @@ export type AuthNavMenuPropType = {
 	onClick: () => void;
 	className?: string;
 };
+
+export type SignupFormType = z.infer<typeof signupSchema>;
+export type LoginFormType = z.infer<typeof loginSchema>;

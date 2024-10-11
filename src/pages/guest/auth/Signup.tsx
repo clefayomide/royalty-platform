@@ -8,11 +8,9 @@ import {
 } from "../../../components";
 import { signupSchema } from "../../../validation-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useNavigate } from "react-router-dom";
 import { paths } from "../../../route/path";
-
-type FormType = z.infer<typeof signupSchema>;
+import { SignupFormType } from "../../../type";
 
 export const Signup = () => {
 	const navigate = useNavigate();
@@ -20,17 +18,16 @@ export const Signup = () => {
 		handleSubmit,
 		formState: { isDirty, isValid },
 		control,
-	} = useForm<FormType>({
+	} = useForm<SignupFormType>({
 		resolver: zodResolver(signupSchema),
 		mode: "onChange",
 	});
 
-	const onSubmit: SubmitHandler<FormType> = (data) => {
+	const onSubmit: SubmitHandler<SignupFormType> = (data) => {
 		console.log(data);
 	};
 
 	const handleOpenLogin = () => {
-		console.log("clcied");
 		navigate(paths.login);
 	};
 	return (

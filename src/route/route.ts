@@ -1,5 +1,5 @@
 import { AppAuthLayout } from "../layout";
-import { AppSignup } from "../pages";
+import { AppLogin, AppSignup } from "../pages";
 import { RouteType } from "../type";
 import { paths } from "./path";
 
@@ -9,6 +9,12 @@ const authRoutes: RouteType = [
 		path: paths.signup,
 		layout: AppAuthLayout,
 		component: AppSignup,
+	},
+	{
+		title: "Login",
+		path: paths.login,
+		layout: AppAuthLayout,
+		component: AppLogin,
 	},
 ];
 
