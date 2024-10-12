@@ -85,7 +85,7 @@ export const Login = () => {
 				</AppTypography>
 
 				<AppButton
-					type="button"
+					type="submit"
 					disabled={!isDirty || !isValid}
 					className="w-[131px] mt-3"
 				>

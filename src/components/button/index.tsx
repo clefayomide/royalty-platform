@@ -10,6 +10,7 @@ const Button = (props: ButtonPropType) => {
 				disabled ? "bg-disabled" : "bg-primary",
 				className
 			)}
+			disabled={disabled}
 			{...rest}
 		>
 			{children}

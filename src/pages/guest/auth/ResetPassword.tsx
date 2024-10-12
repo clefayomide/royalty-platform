@@ -63,7 +63,7 @@ export const ResetPassword = () => {
 					}}
 				/>
 				<AppButton
-					type="submit"
+					type="button"
 					disabled={!isDirty || !isValid}
 					className="w-[218px] mt-3"
 				>
