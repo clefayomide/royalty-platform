@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { loginSchema, signupSchema } from "../validation-schema";
+import { loginSchema, resetPasswordSchema, signupSchema } from "../validation-schema";
 
 export type RouteType = {
 	title: string;
@@ -39,3 +39,4 @@ export type AuthNavMenuPropType = {
 
 export type SignupFormType = z.infer<typeof signupSchema>;
 export type LoginFormType = z.infer<typeof loginSchema>;
+export type ResetPasswordFormType = z.infer<typeof resetPasswordSchema>

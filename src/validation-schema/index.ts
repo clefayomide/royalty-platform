@@ -34,3 +34,9 @@ export const loginSchema = z.object({
 		.email({ message: validationMessages.valMsg.email }),
 	password: z.string({ message: validationMessages.reqFields.password }),
 });
+
+export const resetPasswordSchema = z.object({
+	email: z
+		.string({ message: validationMessages.reqFields.email })
+		.email({ message: validationMessages.valMsg.email }),
+});

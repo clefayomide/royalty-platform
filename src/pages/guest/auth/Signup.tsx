@@ -39,10 +39,7 @@ export const Signup = () => {
 			<AppTypography variant="h6" className="text-[20px] font-normal">
 				Create an account in 1 minute
 			</AppTypography>
-			<AppForm
-				onSubmit={handleSubmit(onSubmit)}
-				className="flex mt-7 flex-col gap-6"
-			>
+			<AppForm onSubmit={handleSubmit(onSubmit)}>
 				<Controller
 					name="firstName"
 					control={control}
