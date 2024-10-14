@@ -15,6 +15,12 @@ export default {
 				inputBorder: "#B1B7D6",
 				primary: "#7D97FF",
 				disabled: "#CED6F7",
+				cardBorderInactive: "#54545499",
+				cardBorderActive: "#7D97FF",
+				checkboxBorder: "#969696"
+			},
+			boxShadow: {
+				cardShadow: "0px 4px 20px 0px #7D97FF33",
 			},
 			backgroundImage: {
 				authCustomGradient:

@@ -1,5 +1,6 @@
-import { AppAuthLayout } from "../layout";
+import { AppAuthLayout, AppKycLayout } from "../layout";
 import {
+	AppKyc,
 	AppLogin,
 	AppResetPassword,
 	AppResetPasswordSent,
@@ -35,4 +36,8 @@ const authRoutes: RouteType = [
 	},
 ];
 
-export const routes = [...authRoutes];
+const kycRoutes: RouteType = [
+	{ title: "KYC", path: paths.kyc, layout: AppKycLayout, component: AppKyc },
+];
+
+export const routes = [...authRoutes, ...kycRoutes];

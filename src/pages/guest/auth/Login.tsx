@@ -28,8 +28,8 @@ export const Login = () => {
 		navigate(paths.signup);
 	};
 
-	const onSubmit: SubmitHandler<LoginFormType> = (data) => {
-		console.log(data);
+	const onSubmit: SubmitHandler<LoginFormType> = () => {
+		navigate(paths.kyc);
 	};
 
 	return (

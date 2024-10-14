@@ -6,7 +6,7 @@ import { classnames } from "../../utils";
 export default function AuthNavigationMenu(
 	props: Readonly<AuthNavMenuPropType>
 ) {
-	const { text, onClick, className = "" } = props;
+	const { text, onClick, className = "", showLogo = false } = props;
 	return (
 		<header
 			className={classnames(
@@ -15,8 +15,12 @@ export default function AuthNavigationMenu(
 			)}
 		>
 			<nav className="w-full h-full">
-				<ul className="w-full h-full flex justify-between items-center minXl:justify-end ">
-					<li className="block minXl:hidden">
+				<ul
+					className={`w-full h-full flex justify-between items-center ${
+						!showLogo && "minXl:justify-end"
+					} `}
+				>
+					<li className={`${!showLogo && "block minXl:hidden"}`}>
 						<Logo width="17.5" height="35" />
 					</li>
 					<li>
